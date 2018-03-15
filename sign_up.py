@@ -24,24 +24,27 @@ def confirm_password():
         return password
 
 
-profile_dict = {'id':[],'password':[]
+profile_dict = {'user_id':[],'password':[]
                 }
 def sign_up(profiles):
-    id = str(input("Please enter your ID: \n >"))
+    user_id = str(input("Please enter your ID: \n >"))
     password = confirm_password()
-    profiles['id'].append(id)
+    profiles['user_id'].append(user_id)
     profiles['password'].append(password)
     print("Sign Up successful!")
     print(profile)
 
 def print_users(profiles):
-    for i in range(0,len(profiles[id])):
-        print("User \t Password")
-        print(profiles["id"][i] + "\t" + profiles["password"][i])
-        
-profile_dict['id'].append('ljin0906')
-profile_dict['id'].append('ljin')
-profile_dict['id'].append('ljin950906')
+    print("User \t Password")
+    for i in range(0,len(profiles['user_id'])):
+        print(profiles["user_id"][i] + "\t" + profiles["password"][i])
+
+
+#def encrypt(password):
+    
+profile_dict['user_id'].append('ljin0906')
+profile_dict['user_id'].append('ljin')
+profile_dict['user_id'].append('ljin950906')
 profile_dict['password'].append('wkddnjs12')
 profile_dict['password'].append('wkddnjs')
 profile_dict['password'].append('Wkddnjs12')
